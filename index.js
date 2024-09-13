@@ -1,17 +1,19 @@
-let w = +document.getElementById("weight");
-let h = +document.getElementById("height");
-let bmi = w / (h ^ 2);
+let weight = document.getElementById("weight");
+let height = document.getElementById("height");
 let result = document.getElementById("result");
 
 function calbmi() {
+    let w = +weight.value;
+    let h = +height.value;
+    let bmi = w / (h ** 2);
     if (bmi < 18.5) {
-        result.innerText = " Result: Underweight";
+        result.innerText = ` Result: ${bmi} - Underweight`;
     } else if (bmi < 25) {
-        result.innerText = "Result: Normal";
+        result.innerText = `Result: ${bmi} - Normal`;
     } else if (bmi < 30) {
-        result.innerText = "Result: Overweight";
+        result.innerText = `Result: ${bmi} - Overweight!`;
     } else {
-        result.innerText = "Result: Obese";
+        result.innerText = `Result: ${bmi} - Obese!!!`;
     }
 
 }
